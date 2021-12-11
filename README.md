@@ -14,3 +14,8 @@ PulseView import Value Change Dump data apears to work fine, so I'll use that fo
 
 # Command line
 nodejs convert.js
+
+# Options
+Options are hard coded, editable top of the file convert.js
+1. FILENAME: The source CSV file name.
+2. VOLTAGE: The mid point between high and low signal. This determins when a binary 0 or 1 occurs. Example: 5v logic will be 2.5. This can be tweeked for example if you want a lower trigger point 0.5 might be what your after.
