@@ -33,14 +33,14 @@ Options are hard coded, editable top of the file convert.js
 4. const TIME_MULTIPLIER 	= 10000000
 5. const TIME_SCALE 		  = "100 ns"
 
-### VOLTAGE setting
+### Setting VOLTAGE
 Somewhere near the mid range of the voltage logic. If 5 volts, above or below 2.5 will determine a 1 or 0.
 
-### TIME_MULTIPLIER
+### Setting TIME_MULTIPLIER
 Whatever number is required to match the TIME_SCALE. eg In the input file a time of 2.00000E-07 = 0.0000002s = 200ns = 2 at 100ns(TIME_SCALE) intervals.
 So 0.0000002 * 10000000(TIME_MULTIPLIER) = 2.
 
-### TIME_SCALE
+### Setting TIME_SCALE
 TIME_SCALE for one probe on a DSO5205P is 100 ns.
 The input file (WaveData50.csv) shows timebase=40000000(ps), this doesn't make sense to me.
 
