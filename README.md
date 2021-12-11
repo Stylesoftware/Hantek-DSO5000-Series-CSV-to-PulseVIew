@@ -26,7 +26,7 @@ PulseView import Value Change Dump data apears to work fine, so I'll use that fo
 10. UART for example, to guess the baud rate, match the yellow bit width's to the average smaller pulse width's.
 
 ### Default options
-Options are hard coded, editable top of the file convert.js
+Options are hard coded, editable top of the file convert.js.
 1. const FILE_IN			    = "WaveData50.csv"
 2. const FILE_OUT			    = "value-change-dump-data.vcd"
 3. const VOLTAGE			    = 2.5
