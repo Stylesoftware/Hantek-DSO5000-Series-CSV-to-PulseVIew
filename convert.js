@@ -3,7 +3,7 @@
 const FILE_IN			= "WaveData50.csv";
 const FILE_OUT			= "value-change-dump-data.vcd";
 const VOLTAGE			= 2.5;
-const TIME_MULTIPLIER 	= 10000000;
+const TIME_MULTIPLIER 	        = 10000000;
 const TIME_SCALE 		= "100 ns";
 
 /**************** CONVERT *******************/
