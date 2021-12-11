@@ -17,12 +17,12 @@ PulseView import Value Change Dump data apears to work fine, so I'll use that fo
 1. Copy convert.js in to a folder.
 2. Copy the Hantek CSV file in to the same folder.
 3. Edit convert.js and set your desired input and output file names.
-4. run the command `nodejs convert.js`
-5. Launch PulseView
-6. Click Create new session
-7. Click Import Value Change Dump data
-8. Select the output file (value-change-dump-data.vcd)
-9. Select a decoder, attach to the D0 line
+4. run the command. `nodejs convert.js`
+5. Launch PulseView.
+6. Click Create new session.
+7. Click Import Value Change Dump data.
+8. Select the output file. (value-change-dump-data.vcd)
+9. Select a decoder, attach to the D0 line.
 10. UART for example, to guess the baud rate, match the yellow bit width's to the average smaller pulse width's.
 
 ### Default options
@@ -38,7 +38,7 @@ Somewhere near the mid range of the voltage logic. If 5 volts, above or below 2.
 
 ### TIME_MULTIPLIER
 Whatever number is required to match the TIME_SCALE. eg In the input file a time of 2.00000E-07 = 0.0000002s = 200ns = 2 at 100ns(TIME_SCALE) intervals.
-So 0.0000002 * 10000000(TIME_MULTIPLIER) = 2
+So 0.0000002 * 10000000(TIME_MULTIPLIER) = 2.
 
 ### TIME_SCALE
 TIME_SCALE for one probe on a DSO5205P is 100 ns.
