@@ -1,6 +1,8 @@
 # Hantek-DSO5000-Series-CSV-to-PulseVIew
 Convert Hantek DS0 CSV file to PulseView Value Change Dump data file for protocol analysis.
 
+<img src="https://github.com/Stylesoftware/Hantek-DSO5000-Series-CSV-to-PulseVIew/blob/main/sample/115200baud-at-100ns.png">
+
 ### The problem
 The Hantek DSO 5000 Series has no protocol analysis, but can save to a time based CSV file.
 Nothing I've found can load said file, so a conversion is nessesary.
@@ -10,7 +12,6 @@ Write a small nodejs conversion script to convert DSO 5000 Series CSV files to s
 PulseView CSV import is as of this time buggy in that it forgets the time-base, making protocol analysis bug out.
 PulseView import Value Change Dump data apears to work fine, so I'll use that format.
 
-https://github.com/Stylesoftware/Hantek-DSO5000-Series-CSV-to-PulseVIew/blob/main/sample/115200baud-at-100ns.png
 
 ### How to use
 1. Copy convert.js in to a folder.
