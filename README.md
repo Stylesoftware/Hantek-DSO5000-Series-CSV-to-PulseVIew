@@ -11,14 +11,33 @@ PulseView CSV import is as of this time buggy in that it forgets the time-base, 
 PulseView import Value Change Dump data apears to work fine, so I'll use that format.
 
 ### How to use
-1. Copy this GIT in to a folder.
+1. Copy convert.js in to a folder.
 2. Copy the Hantek CSV file in to the same folder.
-3. Rename the Hantek CSV file to hantek.csv, or change the source code to your desired file name (convert.js first line)
+3. Edit convert.js and set your desired input and output file names.
+4. run the command `nodejs convert.js`
+5. Launch PulseView
+6. Click Create new session
+7. Click Import Value Change Dump data
+8. Select the output file (value-change-dump-data.vcd)
+9. Select a decoder, attach to the D0 line
+10. UART for example, to guess the baud rate, match the yellow bit width's to the average smaller pulse width's.
 
-### Command line
-nodejs convert.js
-
-### Options
+### Default options
 Options are hard coded, editable top of the file convert.js
-1. FILENAME: The source CSV file name.
-2. VOLTAGE: The mid point between high and low signal. This determins when a binary 0 or 1 occurs. Example: 5v logic will be 2.5. This can be tweeked for example if you want a lower trigger point 0.5 might be what your after.
+1. const FILE_IN			    = "WaveData50.csv"
+2. const FILE_OUT			    = "value-change-dump-data.vcd"
+3. const VOLTAGE			    = 2.5
+4. const TIME_MULTIPLIER 	= 10000000
+5. const TIME_SCALE 		  = "100 ns"
+
+### VOLTAGE setting
+Somewhere near the mid range of the voltage logic. If 5 volts, above or below 2.5 will determine a 1 or 0.
+
+### TIME_MULTIPLIER
+Whatever number is required to match the TIME_SCALE. eg In the input file a time of 2.00000E-07 = 0.0000002s = 200ns = 2 at 100ns(TIME_SCALE) intervals.
+So 0.0000002 * 10000000(TIME_MULTIPLIER) = 2
+
+### TIME_SCALE
+TIME_SCALE for one probe on a DSO5205P is 100 ns.
+The input file (WaveData50.csv) shows timebase=40000000(ps), this doesn't make sense to me.
+
