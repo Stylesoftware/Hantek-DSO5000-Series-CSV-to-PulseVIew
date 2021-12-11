@@ -12,16 +12,19 @@ Write a small nodejs conversion script to convert DSO 5000 Series CSV files to s
 PulseView CSV import is as of this time buggy in that it forgets the time-base, making protocol analysis bug out.
 PulseView import Value Change Dump data apears to work fine, so I'll use that format.
 
+### What you need
+1. NodeJS
+2. PulseView
 
 ### How to use
 1. Copy convert.js in to a folder.
 2. Copy the Hantek CSV file in to the same folder.
 3. Edit convert.js and set your desired input and output file names.
-4. run the command. `nodejs convert.js`
+4. Run the command. `node convert.js`
 5. Launch PulseView.
 6. Click Create new session.
 7. Click Import Value Change Dump data.
-8. Select the output file. (value-change-dump-data.vcd)
+8. Select the output file created by the converter. (value-change-dump-data.vcd)
 9. Select a decoder, attach to the D0 line.
 10. UART for example, to guess the baud rate, match the yellow bit width's to the average smaller pulse width's.
 
@@ -44,3 +47,9 @@ So 0.0000002 * 10000000(TIME_MULTIPLIER) = 2.
 TIME_SCALE for one probe on a DSO5205P is 100 ns.
 The input file (WaveData50.csv) shows timebase=40000000(ps), this doesn't make sense to me.
 
+### To do
+1. Create a 2 channel CSV from the hantek.
+2. Detect and convert a second channel.
+3. Auto detect TIME_SCALE & TIME_MULTIPLER by looking at the time intervals from the input CSV file.
+4. Add input, output and voltage options to command line, removing all hardcoded options.
+ 
