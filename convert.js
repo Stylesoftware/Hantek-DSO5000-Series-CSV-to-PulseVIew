@@ -42,8 +42,9 @@ for(var a=0;a<fin.length;a++) {
 
 	if(line[1] >= VOLTAGE) {
 		state = 1;
-	} else 
+	} else {
 		state = 0;
+	}
 	
 	if(state !== last_state) {
 		last_state = state;
