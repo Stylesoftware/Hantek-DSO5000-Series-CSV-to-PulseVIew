@@ -8,7 +8,7 @@ const TIME_SCALE 		= "100 ns";
 
 /**************** CONVERT *******************/
 
-const fs = require('fs')
+const fs = require('fs');
 
 const header = 
 `$date Sat Dec 11 13:35:00 2021 $end
@@ -25,7 +25,7 @@ $enddefinitions $end
 let fout = header;
 let state = -1;
 let last_state = -1;
-let time = -1
+let time = -1;
 
 try {
 	var fin = fs.readFileSync(FILE_IN, {encoding:'utf8'});
