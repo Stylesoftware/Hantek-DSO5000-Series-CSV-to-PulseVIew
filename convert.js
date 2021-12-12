@@ -56,7 +56,6 @@ for(var a=0;a<fin.length;a++) {
 try {
 	fs.writeFileSync(FILE_OUT, fout);
 } catch (e) {
-	console.log(FILE_IN, 'File read error', e);
-	return;
+	console.log(FILE_OUT, 'File write error', e);
 }
 
