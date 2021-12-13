@@ -48,8 +48,5 @@ TIME_SCALE for one probe on a DSO5205P is 100 ns.
 The input file (WaveData50.csv) shows timebase=40000000(ps), this doesn't make sense to me.
 
 ### To do
-1. Create a 2 channel CSV from the hantek.
-2. Detect and convert a second channel.
-3. Auto detect TIME_SCALE & TIME_MULTIPLER by looking at the time intervals from the input CSV file.
-4. Add input, output and voltage options to command line, removing all hardcoded options.
+Auto detect TIME_SCALE & TIME_MULTIPLER by looking at the time intervals from the input CSV file.
  
