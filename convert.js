@@ -42,7 +42,7 @@ for(var a=0;a<fin.length;a++) {
 
 	let line = fin[a].split(',');
 
-	if(line[1] >= VOLTAGE) {
+	if(line[1] >= VOLTAGE*1000) {
 		state = 1;
 	} else {
 		state = 0;
